@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>求职提示词生成器(免费)· 填空写出对齐JD的简历提示词</title>
+<meta name="description" content="求职不会写提示词?填几个空:角色+任务+约束+格式,实时生成能直接用的求职提示词。免费,带简历/求职信/面试场景示例。" />
+<meta name="keywords" content="求职提示词生成,AI写简历提示词,简历提示词工具,AI求职工具" />
+<link rel="canonical" href="https://chriswu0318.github.io/ai-store-job/提示词生成器/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="求职提示词生成器(免费)· 填空写出对齐JD的简历提示词" />
+<meta property="og:description" content="求职不会写提示词?填几个空:角色+任务+约束+格式,实时生成能直接用的求职提示词。免费,带简历/求职信/面试场景示例。" />
+<meta property="og:image" content="https://chriswu0318.github.io/ai-store-job/og-cover.png" />
+<meta property="og:url" content="https://chriswu0318.github.io/ai-store-job/提示词生成器/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://chriswu0318.github.io/ai-store-job/og-cover.png" />
+<meta name="theme-color" content="#3b1d80" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236d28d9'/%3E%3Ctext x='50' y='72' font-size='50' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='bold'%3E词%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#f6f4fb;--surface:#fff;--mint:#efe9fb;--ink:#1c1530;--soft:#5f5577;--faint:#938aa8;--green:#6d28d9;--green-d:#5b21b6;--green-deep:#3b1d80;--gold:#e0a93b;--line:#e8e2f3;--line2:#d8cdee;--disp:"Plus Jakarta Sans","Noto Sans SC",sans-serif;--sans:"Noto Sans SC",-apple-system,"PingFang SC",sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
+  header{position:sticky;top:0;z-index:40;background:rgba(246,244,251,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:800;font-size:16px;color:var(--ink);text-decoration:none}
+  .brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--green),var(--green-deep));display:grid;place-items:center;color:#fff;font-weight:900;font-size:14px}
+  .nav-cta{background:var(--ink);color:#fff;font-weight:700;font-size:13.5px;padding:8px 16px;border-radius:999px;text-decoration:none}
+  .hero{text-align:center;padding:38px 0 20px}
+  .pill{display:inline-block;background:var(--mint);border:1px solid var(--line2);color:var(--green-d);font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+  h1{font-family:var(--disp);font-weight:800;font-size:clamp(24px,4.5vw,34px);line-height:1.2;margin-bottom:10px}
+  .lead{color:var(--soft);font-size:15px;max-width:560px;margin:0 auto}
+  .app{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:8px 0 30px}@media(max-width:780px){.app{grid-template-columns:1fr}}
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 22px}
+  .panel h2{font-family:var(--disp);font-weight:800;font-size:15px;margin-bottom:4px}
+  .panel .sub{font-size:12.5px;color:var(--faint);margin-bottom:14px}
+  .fld{margin-bottom:15px}
+  .fld label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+  .fld label .n{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:10px;font-weight:800;margin-right:6px;vertical-align:middle}
+  .fld label .opt{color:var(--faint);font-weight:400;font-size:11.5px;margin-left:5px}
+  .fld input,.fld textarea,.fld select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font-family:var(--sans);font-size:13.5px;outline:none;background:#fcfdfc;resize:vertical}
+  .fld input:focus,.fld textarea:focus,.fld select:focus{border-color:var(--green)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+  .chip{font-size:12px;background:var(--mint);color:var(--green-d);border:1px solid var(--line2);border-radius:999px;padding:4px 11px;cursor:pointer;user-select:none}
+  .chip:hover{filter:brightness(.97)}.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+  .out{position:sticky;top:74px}
+  .out .box{background:linear-gradient(160deg,#10211a,#16312a);color:#e8f3ec;border-radius:14px;padding:18px;font-size:13.5px;line-height:1.75;white-space:pre-wrap;min-height:200px;font-family:ui-monospace,"SF Mono",Menlo,monospace}
+  .out .box .ph{color:#6f8a7d}.out .box b{color:#7fe0a8;font-weight:700}
+  .btns{display:flex;gap:10px;margin-top:14px}
+  .btn{flex:1;border:none;border-radius:11px;padding:13px;font-family:var(--disp);font-weight:800;font-size:14.5px;cursor:pointer;transition:.15s}
+  .btn-p{background:var(--green);color:#fff}.btn-g{background:var(--mint);color:var(--green-deep);border:1px solid var(--line2);flex:none;padding:13px 18px}
+  .examples{margin-bottom:18px}.examples .lbl{font-size:12.5px;color:var(--faint);margin-bottom:8px;font-weight:600}
+  .cta{background:linear-gradient(160deg,var(--green-deep),#5b21b6);border-radius:18px;padding:28px 24px;color:#fff;text-align:center;margin:6px 0 40px}
+  .cta h2{font-family:var(--disp);font-weight:800;font-size:20px;margin-bottom:8px}.cta p{color:#d6c9f2;font-size:14px;max-width:500px;margin:0 auto 16px}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.cta-row a{font-weight:800;font-size:15px;padding:13px 26px;border-radius:999px;text-decoration:none}
+  .cta-row .primary{background:var(--gold);color:var(--green-deep)}.cta-row .ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px;transition:transform .3s;z-index:90}.toast.show{transform:translateX(-50%) translateY(0)}
+  footer{text-align:center;color:var(--faint);font-size:12.5px;padding:20px 0 50px;line-height:1.9}footer a{color:var(--green-d);font-weight:700;text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="../index.html" class="brand"><span class="dot">词</span>AI 求职提示词库</a>
+  <a href="../index.html" class="nav-cta">看产品 →</a>
+</div></header>
+<section class="hero"><div class="wrap">
+  <div class="pill">🆓 免费工具 · 填空即用</div>
+  <h1>求职提示词生成器</h1>
+  <p class="lead">不知道怎么让 AI 改好简历?按角色+任务+约束+格式填几个空,右边实时拼出能直接用的求职提示词。</p>
+</div></section>
+<div class="wrap">
+  <div class="examples"><div class="lbl">🎯 先试试一键示例(点了会自动填好,你再改):</div><div class="chips" id="examples"></div></div>
+  <div class="app">
+    <div class="panel">
+      <h2>① 填这几个空</h2><div class="sub">越具体,AI 给的越准。带 * 的最影响效果。</div>
+      <div class="fld"><label><span class="n">角</span>角色 · 让 AI 扮演谁?<span class="opt">*</span></label><input id="role" placeholder="如:十年经验的简历顾问" /><div class="chips" id="roleChips"></div></div>
+      <div class="fld"><label><span class="n">务</span>任务 · 让它做什么?<span class="opt">*</span></label><input id="task" placeholder="如:把这段经历对齐JD改写" /></div>
+      <div class="fld"><label><span class="n">料</span>你的具体信息 · 把它需要的素材给它</label><textarea id="ctx" rows="2" placeholder="如:原经历=【粘贴】;目标岗位JD=【粘贴】"></textarea></div>
+      <div class="fld"><label><span class="n">束</span>约束 · 你的"隐藏标准"摊开说<span class="opt">点选 + 可补充</span></label><div class="chips" id="cstChips"></div><input id="cstMore" placeholder="其它要求…" style="margin-top:8px" /></div>
+      <div class="fld"><label><span class="n">式</span>输出格式 · 让结果能直接用</label>
+        <select id="fmt"><option value="">(不指定)</option><option>用列表逐条输出</option><option value="表格,列出:序号 | 内容 | 说明">用表格输出</option><option>分点输出,每点配一句说明</option><option>先给3个备选,再展开我选的那个</option><option>直接给成品,不要解释</option></select></div>
+    </div>
+    <div class="panel out">
+      <h2>② 生成的提示词(实时)</h2><div class="sub">复制它,粘贴到 DeepSeek / 豆包 / ChatGPT / Kimi 等任意 AI。</div>
+      <div class="box" id="out"><span class="ph">左边填一填,这里就会自动拼出你的提示词…</span></div>
+      <div class="btns"><button class="btn btn-p" id="copyBtn">📋 复制提示词</button><button class="btn btn-g" id="clearBtn">清空</button></div>
+    </div>
+  </div>
+  <div class="cta">
+    <h2>每次自己拼也累?24 条现成求职提示词拿来即用</h2><p>这个工具教你怎么拼;完整版24条求职提示词是已经拼好的,简历/求职信/面试/背调全流程,套上你的经历就能用。</p>
+    <div class="cta-row"><a href="../免费提示词/" class="primary">免费试几条 →</a><a href="../index.html" class="ghost">看完整 24 条 →</a></div>
+  </div>
+</div>
+<footer><a href="../index.html">← 回首页</a> &nbsp;·&nbsp; <a href="../提示词怎么写/">提示词怎么写</a> &nbsp;·&nbsp; <a href="../速查表/">AI 速查表</a><br/>本工具完全免费、纯本地运行,不上传任何内容。不构成收益承诺。</footer>
+<div class="toast" id="toast">已复制 ✓</div>
+<script>
+const $=s=>document.querySelector(s);
+const ROLE_SUGGEST=["十年经验的简历顾问","大厂资深面试官","求职教练","职业规划师","HR招聘负责人"];
+const CONSTRAINTS=["对齐目标岗位JD关键词","用强动词+量化结果","保持真实,绝不编造","真诚、不浮夸","用STAR结构","控制篇幅"];
+const EXAMPLES=[{"n":"改写经历","role":"十年经验的简历顾问","task":"把这段经历对齐JD改写得更有说服力","ctx":"原经历=【粘贴】;目标JD=【粘贴】","cst":["对齐目标岗位JD关键词","用强动词+量化结果","保持真实,绝不编造"],"fmt":"直接给成品,不要解释"},{"n":"求职信","role":"求职教练","task":"写一封求职信","ctx":"公司+岗位=【填】;我的背景=【简述】","cst":["真诚、不浮夸","控制篇幅"],"fmt":"直接给成品,不要解释"},{"n":"模拟面试","role":"大厂资深面试官","task":"基于我的简历提问并追问,答后给反馈","ctx":"岗位JD=【粘贴】;我的简历=【粘贴】","cst":["用STAR结构"],"fmt":"分点输出,每点配一句说明"},{"n":"行为题","role":"求职教练","task":"准备一道行为面试题的STAR回答","ctx":"题目=请举例你如何【某能力】;我的经历=【简述】","cst":["用STAR结构","保持真实,绝不编造"],"fmt":"先给3个备选,再展开我选的那个"}];
+let cst=new Set();
+function chip(t,on){return '<span class="chip'+(on?' on':'')+'" data-v="'+t.replace(/"/g,'&quot;')+'">'+t+'</span>';}
+function renderRoleChips(){$("#roleChips").innerHTML=ROLE_SUGGEST.map(r=>'<span class="chip" data-r="'+r+'">'+r+'</span>').join("");$("#roleChips").querySelectorAll(".chip").forEach(c=>c.onclick=()=>{$("#role").value=c.dataset.r;build();});}
+function renderCstChips(){$("#cstChips").innerHTML=CONSTRAINTS.map(c=>chip(c,cst.has(c))).join("");$("#cstChips").querySelectorAll(".chip").forEach(c=>c.onclick=()=>{const v=c.dataset.v;cst.has(v)?cst.delete(v):cst.add(v);renderCstChips();build();});}
+function renderExamples(){$("#examples").innerHTML=EXAMPLES.map((e,i)=>'<span class="chip" data-i="'+i+'">'+e.n+'</span>').join("");$("#examples").querySelectorAll(".chip").forEach(c=>c.onclick=()=>loadExample(EXAMPLES[+c.dataset.i]));}
+function loadExample(e){$("#role").value=e.role;$("#task").value=e.task;$("#ctx").value=e.ctx;cst=new Set(e.cst);const opt=[...$("#fmt").options].find(o=>o.value===e.fmt||o.textContent.includes(e.fmt));if(opt)$("#fmt").value=opt.value;$("#cstMore").value="";renderCstChips();build();}
+function build(){const role=$("#role").value.trim(),task=$("#task").value.trim(),ctx=$("#ctx").value.trim(),fmt=$("#fmt").value.trim(),more=$("#cstMore").value.trim();
+  if(!role&&!task){$("#out").innerHTML='<span class="ph">左边填一填,这里就会自动拼出你的提示词…</span>';return;}
+  let p="";if(role)p+="你是"+role+"。\n";if(task)p+="请帮我"+task+"。\n";if(ctx)p+="\n我的信息:"+ctx+"\n";
+  const all=[...cst];if(more)all.push(more);if(all.length)p+="\n要求:\n"+all.map((c,i)=>(i+1)+". "+c).join("\n")+"\n";if(fmt)p+="\n请用以下格式输出:"+fmt+"。";
+  $("#out").innerHTML=esc(p).replace(/^你是/,'<b>你是</b>').replace(/请帮我/,'<b>请帮我</b>').replace(/我的信息:/,'<b>我的信息:</b>').replace(/要求:/,'<b>要求:</b>').replace(/请用以下格式输出:/,'<b>请用以下格式输出:</b>');$("#out").dataset.raw=p;}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+let tt;function toast(){const e=$("#toast");e.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("show"),1600);}
+["role","task","ctx","cstMore"].forEach(id=>$("#"+id).addEventListener("input",build));$("#fmt").addEventListener("change",build);
+$("#copyBtn").onclick=()=>{const raw=$("#out").dataset.raw;if(!raw){toast();return;}navigator.clipboard.writeText(raw).then(toast);};
+$("#clearBtn").onclick=()=>{["role","task","ctx","cstMore"].forEach(id=>$("#"+id).value="");$("#fmt").value="";cst=new Set();renderCstChips();build();};
+renderRoleChips();renderCstChips();renderExamples();build();
+</script>
+</body>
+</html>
